@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/awesomplete.css" />
+    <script src="js/vendor/awesomplete.js" async></script>
     <style>
         /* https://colorpalettes.colorion.co/ #17 */
         :root {
@@ -114,7 +116,7 @@
         <div class="question">
             <a href="/">Do I really need</a>
             <form>
-                <input class="search" type="text">
+                <input class="awesomplete search" list="technologies" type="text">
             </form>?
         </div>
         <div class="answer">
@@ -136,6 +138,10 @@
     <footer>
         <p>A website dedicated to building better systems by using less technology.</p>
     </footer>
+    <datalist id="technologies">
+        <option value="kubernetes">Kubernetes</option>
+        <option value="database">Database</option>
+    </datalist>
 </body>
 
 </html>
