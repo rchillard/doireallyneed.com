@@ -1,11 +1,19 @@
 /* https://colorpalettes.colorion.co/ #17 */
 :root {
+    /* Breakpoints */
+	--breakpoint-small: 600px;
+	--breakpoint-medium: 768px;
+	--breakpoint-large: 992px;
+	--breakpoint-xlarge: 1200px;
+
+    /* Colors */
     --dirn-white: HSL(150, 14%, 97%); /* #F7F9F8 */
     --dirn-black: HSL(0, 0%, 19%);    /* #303030 */
     --dirn-yellow: HSL(39, 78%, 61%); /* #E9B24C */
     --dirn-blue: HSL(190, 37%, 70%);  /* #97C6CF */
     --dirn-green: HSL(144, 30%, 65%); /* #89C09F */
 
+    /* Fonts */
     --font-stack: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
@@ -61,7 +69,7 @@ footer {
     border-bottom: 1px solid black;
     font-size: 1.5rem;
     text-align: center;
-    width: min(30vw, 30ch);
+    width: 30ch;
 }
 
 .answer {
@@ -112,10 +120,17 @@ footer {
 /* MEDIA QUERIES */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .question {
+        flex-direction: column;
+    }
+    
+    .search {
+        width: 15ch;
+    }
+
     .answer {
         flex-direction: column;
     }
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -123,12 +138,20 @@ footer {
     .answer {
         flex-direction: column;
     }
+
+    .search {
+        width: 20ch;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .answer {
         flex-direction: row;
+    }
+
+    .search {
+        width: 30ch;
     }
 }
 
