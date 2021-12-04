@@ -7,109 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do I Really Need?</title>
     <link rel="stylesheet" href="css/awesomplete.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/vendor/awesomplete.js" async></script>
-    <style>
-        /* https://colorpalettes.colorion.co/ #17 */
-        :root {
-            --dirn-white: #F7F9F8;
-            --dirn-black: #303030;
-            --dirn-yellow: #E9B24C;
-            --dirn-blue: #97C6CF;
-            --dirn-green: #89C09F;
-
-            --font-stack: "Open Sans", Helvetica, Arial, sans-serif;
-        }
-
-        html {
-            background-color: var(--dirn-white);
-            color: var(--dirn-black);
-            font-family: var(--font-stack);
-        }
-
-        main {
-            margin: 0 auto;
-        }
-
-        form {
-            display: inline;
-        }
-
-        input[type="text"] {
-            background-color: var(--dirn-white);
-        }
-
-        footer {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            padding: 3rem;
-        }
-
-        .question {
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            margin: 0 auto;
-            padding: 1rem;
-            height: 30vh;
-            max-width: 100vw;
-        }
-
-        .question a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .search {
-            border: 0;
-            border-bottom: 1px solid black;
-            font-size: 1.5rem;
-            text-align: center;
-            width: 30ch;
-        }
-
-        .answer {
-            align-content: center;
-            align-items: flex-start;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .answer div {
-            padding: 1rem;
-        }
-
-        .litmus {
-            background-color: var(--dirn-yellow);
-            height: 50vh;
-            width: 32vw;
-        }
-
-        .resources {
-            background-color: var(--dirn-blue);
-            height: 50vh;
-            width: 32vw;
-        }
-
-        .alternatives {
-            background-color: var(--dirn-green);
-            height: 50vh;
-            width: 32vw;
-        }
-
-        .answer h2 {
-            font-weight: 300;
-            text-align: center;
-        }
-
-        .answer p {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -118,7 +17,7 @@
     </header>
     <main>
         <div class="question">
-            <a href="/">Do I really need</a>
+            <span>Do I really need </span>
             <form>
                 <input class="awesomplete search" list="technologies" type="text">
             </form>?
@@ -126,21 +25,25 @@
         <div class="answer">
             <div class="litmus">
                 <h2>Litmus Tests</h2>
-                <p>A test in which a single factor (such as an attitude, event, or fact) is decisive.</p>
+                <p>A test in which a single factor is decisive.</p>
                 <p></p>
             </div>
             <div class="resources">
                 <h2>Resources</h2>
-                <p>Background resources to consult before making your hard decision.</p>
+                <p>Resources to consult before making your hard decision.</p>
             </div>
             <div class="alternatives">
                 <h2>Alternatives</h2>
-                <p>Simpler alternatives to the complicated technology you are considering.</p>
+                <p>Simpler alternatives to the technology you are considering.</p>
             </div>
         </div>
     </main>
     <footer>
         <p>A website dedicated to building better systems by using less technology.</p>
+        <p class="credit">
+            Inspired by <a href="https://mcfunley.com/choose-boring-technology">Choose Boring Technology</a>
+            and <a href="https://www.gkogan.co/blog/simple-systems/">Simple Systems Have Less Downtime</a>.
+        </p>
     </footer>
     <datalist id="technologies">
         <option value="a database">a Database</option>
